@@ -1,4 +1,6 @@
 class Item < ApplicationRecord
-  validates :price, :weight, numericality: greater_then: 0, presence: true, on: :create
-
+  has_and_belongs_to_many :carts
+  validates :price, numericality: {greater_than: 0}
+  validates :weight, numericality: {greater_than: 0}, on: :create
+  validates :name, presence: true, on: :create
 end

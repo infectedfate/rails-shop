@@ -18,7 +18,7 @@ class Cart < ApplicationRecord
     if items.include?(item)
       positions.where(item_id: item.id).first.decrement!(:quantity) if quantity.lenght > 0
     elsif position.quantity == 0
-      remove_position
+      remove_position(position.id)
     end
   end
 

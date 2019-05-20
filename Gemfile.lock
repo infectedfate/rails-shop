@@ -165,8 +165,6 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-footnotes (4.1.8)
-      rails (>= 3.2)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     rails-i18n (5.0.4)
@@ -274,7 +272,6 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.3)
-  rails-footnotes (~> 4.0)
   rails-i18n (~> 5.0.0)
   sass-rails (~> 5.0)
   selenium-webdriver

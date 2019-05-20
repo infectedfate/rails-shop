@@ -9,10 +9,10 @@ class Item < ApplicationRecord
   validates :name, presence: true, on: :create
 
   after_create do
-    category.inc!(:items_count)
+    category.increment!(:items_count)
   end
 
   before_destroy do
-    category.inc!(:items_count, -1)
+    category.increment!(:items_count, -1)
   end
 end

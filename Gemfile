@@ -17,21 +17,15 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 gem 'devise', '~> 4.0'
-
 gem 'rails-i18n', '~> 5.0.0'
-
 gem 'pry-rails'
-
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap_form', '>= 4.2.0'
-
 gem 'faraday'
-
 gem "octokit", "~> 4.0"
-
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'will_paginate', '~> 3.1.0'
 gem 'haml'
 
 # Use CoffeeScript for .coffee assets and views

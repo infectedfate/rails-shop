@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_20_171754) do
+ActiveRecord::Schema.define(version: 2019_05_20_172440) do
 
   create_table "carts", force: :cascade do |t|
     t.integer "user_id"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_05_20_171754) do
     t.string "imageable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type"
   end
 
   create_table "items", force: :cascade do |t|
@@ -52,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_05_20_171754) do
     t.integer "weight"
     t.integer "category_id"
     t.boolean "used", default: false
+    t.index ["name"], name: "index_items_on_name"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -75,6 +77,7 @@ ActiveRecord::Schema.define(version: 2019_05_20_171754) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
